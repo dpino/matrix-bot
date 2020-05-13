@@ -73,9 +73,15 @@ class WKTestBotsFeederPlugin:
                 return True
         return False
 
+<<<<<<< HEAD
     def was_interrupted(self, build):
         for each in build['text']:
             if (re.search('exception interrupted', each, re.IGNORECASE)):
+=======
+    def was_exception(self, build):
+        for each in build['text']:
+            if (re.search('exception', each, re.IGNORECASE)):
+>>>>>>> master
                 return True
         return False
 
